@@ -6,8 +6,11 @@
   height:100vh;
   width:100vw;
 }
-.App-map {
-
+.App-time {
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
 }
 .Sector {
   width:200px;
@@ -20,19 +23,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  &.is-a {
-    transform:translate(-200px,-200px);
-  }
-  &.is-b {
-    transform:translate(-300px,0);
-  }
-  &.is-c {
-    transform:translate(-100px,0);
-  }
-  &.is-d {
-    transform:translate(50px,-200px);
-  }
-  &.is-e {
-    transform:translate(100px,0);
+  &.has-base {
+    background: rgba(50,200,50,1);
   }
 }
