@@ -1,0 +1,38 @@
+.App {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+  width:100vw;
+}
+.App-map {
+
+}
+.Sector {
+  width:200px;
+  height:200px;
+  border:1px solid rgba(0,0,0,0.1);
+  position:absolute;
+  left:50%;
+  top:50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  &.is-a {
+    transform:translate(-200px,-200px);
+  }
+  &.is-b {
+    transform:translate(-300px,0);
+  }
+  &.is-c {
+    transform:translate(-100px,0);
+  }
+  &.is-d {
+    transform:translate(50px,-200px);
+  }
+  &.is-e {
+    transform:translate(100px,0);
+  }
+}
