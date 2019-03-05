@@ -9,6 +9,7 @@ class App extends Component {
       time: 0,
       mutationChance: 0.25,
       mapOffset: [-200,100],
+      mutation: false,
       mapGrid: [
         { key: 'a',
           adjacent: ['b','c'],
@@ -73,7 +74,8 @@ class App extends Component {
   }
   onTick() {
     this.setState({
-      time: this.state.time +1
+      time: this.state.time +1,
+      mutation: false
     });
     this.checkMutations();
   }
@@ -113,7 +115,8 @@ class App extends Component {
     item[prop] = val;
     let newMapGrid = Object.assign(this.state.mapGrid, item);
     this.setState({
-      mapGrid: newMapGrid
+      mapGrid: newMapGrid,
+      mutation: true
     })
   }
   getMapGrid() {
@@ -137,7 +140,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <p className='App-time'>{ this.state.time }</p>
+        <p className='App-time'>{ this.state.time }{ this.state.mutation ? ' mutation!' : '' }</p>
         { this.getMapGrid() }
       </div>
     );
